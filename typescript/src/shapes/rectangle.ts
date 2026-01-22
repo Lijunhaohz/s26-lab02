@@ -1,7 +1,9 @@
-interface Rectangle {
+import { Shape } from "./shape"
+
+// The interface Circle should be hidden from outside this module
+interface Rectangle extends Shape {
     width: number,
     height: number,
-    computeArea: () => number
 }
 
 function newRectangle(width: number, height: number): Rectangle {
@@ -15,4 +17,4 @@ function newRectangle(width: number, height: number): Rectangle {
     }
 }
 
-export { Rectangle, newRectangle }
+export { newRectangle }

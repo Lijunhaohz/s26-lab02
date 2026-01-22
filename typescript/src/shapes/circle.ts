@@ -1,4 +1,11 @@
-function circle(radius: number): Shape {
+import { Shape } from "./shape"
+
+// The interface Circle should be hidden from outside this module
+interface Circle extends Shape {
+    radius: number,
+}
+
+function newCircle(radius: number): Circle {
     return {
         radius,
         computeArea: function (): number {
@@ -7,4 +14,4 @@ function circle(radius: number): Shape {
     }
 }
 
-export { circle }
+export { newCircle }

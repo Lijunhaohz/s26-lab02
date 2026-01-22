@@ -1,4 +1,11 @@
-function square(sideLen: number): Shape {
+import { Shape } from "./shape"
+
+// The interface Circle should be hidden from outside this module
+interface Square extends Shape {
+    sideLen: number,
+}
+
+function newSquare(sideLen: number): Square {
     return {
         sideLen,
         computeArea: function (): number {
@@ -7,4 +14,4 @@ function square(sideLen: number): Shape {
     }
 }
 
-export { square }
+export { newSquare }
