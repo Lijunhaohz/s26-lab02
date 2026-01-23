@@ -1,7 +1,7 @@
 package edu.cmu.cs.cs214.lab02.shapes;
 
 public class Square implements Shape {
-    public final double sideLen;
+    private final double sideLen;
 
     public Square(double sideLen) {
         this.sideLen = sideLen;
